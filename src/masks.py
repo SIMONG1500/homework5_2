@@ -16,3 +16,14 @@ def get_mask_card_number(card_number: str) -> str:
     part4 = full_masked_string[12:16]
 
     return f"{part1} {part2} {part3} {part4}"
+
+
+def get_mask_account(account_num: str) -> str:
+    """принимает на вход номер счета
+    и возвращает его маску"""
+
+    last_4 = account_num[-4:]
+
+    masked_account = f"**{last_4}"
+
+    return masked_account
