@@ -16,3 +16,16 @@ def filter_by_state(state_list: list, state_default='EXECUTED') -> list:
 
     return filtered_list
 
+
+def sort_by_date(state_list: list, decreasing=True) -> list:
+    '''Принимает список словарей
+    и параметр, задающий порядок сортировки.
+    возвращает новый список, отсортированный по дате'''
+
+    sorted_list = state_list.copy()
+
+    sorted_list.sort(key= lambda state_list: state_list.get('date'),
+    reverse = decreasing)
+    return sorted_list
+
+
